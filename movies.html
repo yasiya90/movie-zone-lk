@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Zone Lk | Movies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; padding:16px;
+  background:#000; color:#fff; font-family:Arial;
+}
+.top{
+  display:flex; align-items:center; gap:10px;
+  margin-bottom:12px;
+}
+a{color:#ff3b3b; text-decoration:none}
+.search{
+  flex:1;
+  padding:10px 12px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:14px;
+}
+.card{
+  background:#111; border-radius:14px; overflow:hidden;
+  box-shadow:0 0 14px rgba(255,0,0,.25);
+}
+.poster{
+  height:210px;
+  background:linear-gradient(135deg,#222,#000);
+  display:flex; align-items:center; justify-content:center;
+  font-weight:bold; color:#ff3b3b;
+}
+.info{padding:10px}
+.title{font-size:14px; font-weight:bold; margin-bottom:4px}
+.meta{font-size:12px; opacity:.8; margin-bottom:8px}
+.btn{
+  display:block; text-align:center; padding:8px;
+  background:#c00; color:#fff; border-radius:10px;
+}
+.empty{
+  display:none; text-align:center; opacity:.7; margin-top:20px;
+}
+.footer{margin-top:14px; font-size:12px; opacity:.6; text-align:center}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <a href="index.html">⬅ Home</a>
+  <input id="search" class="search" placeholder="Search movie...">
+</div>
+
+<div id="grid" class="grid">
+
+  <!-- MOVIE 01 : AVATAR -->
+  <div class="card" data-title="avatar">
+    <div class="poster">AVATAR</div>
+    <div class="info">
+      <div class="title">Avatar (2009)</div>
+      <div class="meta">1080p • English • BluRay</div>
+      <a class="btn" href="#" target="_blank">Download</a>
+    </div>
+  </div>
+
+</div>
+
+<div id="empty" class="empty">No movies found</div>
+
+<div class="footer">© Movie Zone Lk</div>
+
+<script>
+const search = document.getElementById('search');
+const cards  = document.querySelectorAll('.card');
+const empty  = document.getElementById('empty');
+
+search.addEventListener('input', () => {
+  const q = search.value.toLowerCase().trim();
+  let found = 0;
+  cards.forEach(c => {
+    const t = c.dataset.title;
+    const show = t.includes(q);
+    c.style.display = show ? '' : 'none';
+    if (show) found++;
+  });
+  empty.style.display = found ? 'none' : 'block';
+});
+</script>
+
+</body>
+</html>

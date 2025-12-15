@@ -2,96 +2,147 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Movie Zone Lk | Movies</title>
+<title>Movie Zone Lk | Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-*{box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-  margin:0; padding:16px;
-  background:#000; color:#fff; font-family:Arial;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9)),
+    url("https://i.imgur.com/9z6xR0K.jpg"); /* Dark Anime Wallpaper */
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins', sans-serif;
+    color:#fff;
 }
-.top{
-  display:flex; align-items:center; gap:10px;
-  margin-bottom:12px;
-}
-a{color:#ff3b3b; text-decoration:none}
-.search{
-  flex:1;
-  padding:10px 12px;
-  border-radius:10px;
-  border:none;
-  outline:none;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
-  gap:14px;
-}
+
 .card{
-  background:#111; border-radius:14px; overflow:hidden;
-  box-shadow:0 0 14px rgba(255,0,0,.25);
+    width:95%;
+    max-width:430px;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 30px rgba(255,0,0,0.3);
+    animation:fadeIn 1.2s ease;
 }
-.poster{
-  height:210px;
-  background:linear-gradient(135deg,#222,#000);
-  display:flex; align-items:center; justify-content:center;
-  font-weight:bold; color:#ff3b3b;
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
-.info{padding:10px}
-.title{font-size:14px; font-weight:bold; margin-bottom:4px}
-.meta{font-size:12px; opacity:.8; margin-bottom:8px}
+
+.logo{
+    text-align:center;
+    font-family:'Orbitron', sans-serif;
+    font-size:26px;
+    color:#ff2d2d;
+    text-shadow:0 0 12px red;
+    margin-bottom:5px;
+}
+
+.tag{
+    text-align:center;
+    font-size:13px;
+    opacity:0.85;
+    margin-bottom:20px;
+}
+
+.anime{
+    width:120px;
+    margin:0 auto 20px;
+    display:block;
+    filter:drop-shadow(0 0 15px red);
+}
+
 .btn{
-  display:block; text-align:center; padding:8px;
-  background:#c00; color:#fff; border-radius:10px;
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    text-align:center;
+    padding:14px;
+    margin:10px 0;
+    border-radius:14px;
+    font-weight:500;
+    letter-spacing:0.5px;
+    transition:0.3s;
 }
-.empty{
-  display:none; text-align:center; opacity:.7; margin-top:20px;
+
+.btn:hover{
+    transform:scale(1.05);
 }
-.footer{margin-top:14px; font-size:12px; opacity:.6; text-align:center}
+
+.red{
+    background:linear-gradient(135deg,#ff0000,#ff5e00);
+    box-shadow:0 0 12px rgba(255,0,0,0.6);
+}
+
+.blue{
+    background:linear-gradient(135deg,#0066ff,#00c6ff);
+    box-shadow:0 0 12px rgba(0,140,255,0.6);
+}
+
+.green{
+    background:linear-gradient(135deg,#00b09b,#96c93d);
+    box-shadow:0 0 12px rgba(0,255,170,0.6);
+}
+
+.footer{
+    text-align:center;
+    margin-top:18px;
+    font-size:12px;
+    opacity:0.7;
+}
 </style>
 </head>
+
 <body>
 
-<div class="top">
-  <a href="index.html">⬅ Home</a>
-  <input id="search" class="search" placeholder="Search movie...">
-</div>
+<div class="card">
 
-<div id="grid" class="grid">
+    <div class="logo">MOVIE ZONE LK</div>
+    <div class="tag">Official Movie & Series Platform</div>
 
-  <!-- MOVIE 01 : AVATAR -->
-  <div class="card" data-title="avatar">
-    <div class="poster">AVATAR</div>
-    <div class="info">
-      <div class="title">Avatar (2009)</div>
-      <div class="meta">1080p • English • BluRay</div>
-      <a class="btn" href="#" target="_blank">Download</a>
+    <!-- Anime Character -->
+    <img class="anime" src="https://i.imgur.com/qJ4X8kP.png" alt="Anime Boy">
+
+    <a class="btn green" href="https://whatsapp.com/channel/0029VbBnBHO7dmeXOGO3Qt24" target="_blank">
+        Official Channel
+    </a>
+
+    <a class="btn red" href="https://chat.whatsapp.com/COhi6146rJB0gniJ1aVWgY" target="_blank">
+        Movie Group 01
+    </a>
+
+    <a class="btn red" href="https://chat.whatsapp.com/LCOKj4TGA2y2q39hdGA3ZC" target="_blank">
+        Movie Group 02
+    </a>
+
+    <a class="btn red" href="https://chat.whatsapp.com/EAYUlUKaa3b91cKsUVPoxx" target="_blank">
+        Movie Group 03
+    </a>
+
+    <a class="btn blue" href="https://chat.whatsapp.com/BcLgx8548qHBP7xovU0JTk" target="_blank">
+        Movie Request Group
+    </a>
+
+    <div class="footer">
+        © 2025 Movie Zone Lk | Powered by Yasiya Tech
     </div>
-  </div>
 
 </div>
-
-<div id="empty" class="empty">No movies found</div>
-
-<div class="footer">© Movie Zone Lk</div>
-
-<script>
-const search = document.getElementById('search');
-const cards  = document.querySelectorAll('.card');
-const empty  = document.getElementById('empty');
-
-search.addEventListener('input', () => {
-  const q = search.value.toLowerCase().trim();
-  let found = 0;
-  cards.forEach(c => {
-    const t = c.dataset.title;
-    const show = t.includes(q);
-    c.style.display = show ? '' : 'none';
-    if (show) found++;
-  });
-  empty.style.display = found ? 'none' : 'block';
-});
-</script>
 
 </body>
 </html>

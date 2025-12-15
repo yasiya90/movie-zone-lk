@@ -1,0 +1,8 @@
+<div class="card" data-title="john wick">
+  <div class="poster" style="background-image:url('posters/johnwick.jpg')"></div>
+  <div class="info">
+    <div class="title">John Wick</div>
+    <div class="meta">720p • English</div>
+    <a class="btn" href="#">Download</a>
+  </div>
+</div>
